@@ -89,6 +89,7 @@
         padding: 0.8rem 0;
         gap: 1rem;
         flex-wrap: wrap;
+        position: relative;
       }
       .nav b {
         font:
@@ -111,6 +112,97 @@
       .nav nav a.on {
         background: var(--ink);
         color: var(--bg);
+      }
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-right: -0.5rem;
+      }
+      .menu-toggle span {
+        width: 24px;
+        height: 2.5px;
+        background: var(--ink);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+      .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .menu-toggle span {
+          background: var(--ink);
+        }
+      }
+      :root[data-theme="dark"] .menu-toggle span {
+        background: var(--ink);
+      }
+      .nav-menu {
+        display: flex;
+      }
+      @media (max-width: 768px) {
+        .top {
+          overflow: visible;
+        }
+        .menu-toggle {
+          display: flex;
+        }
+        .nav {
+          position: static;
+          flex-wrap: nowrap;
+          width: 100%;
+        }
+        .nav b {
+          flex: 1;
+        }
+        .nav-menu {
+          position: fixed;
+          display: flex;
+          top: 56px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          background: var(--sf);
+          border-bottom: 1px solid var(--ln);
+          flex-direction: column;
+          gap: 0;
+          padding: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+          z-index: 999;
+          box-shadow: var(--sh);
+          visibility: hidden;
+        }
+        .nav-menu.open {
+          max-height: calc(100vh - 56px);
+          visibility: visible;
+        }
+        .nav-menu a {
+          padding: 1rem 1.25rem;
+          font-size: 1rem;
+          display: block;
+          border-radius: 0;
+          border-bottom: 1px solid var(--ln);
+          color: var(--ink);
+          text-decoration: none;
+        }
+        .nav-menu a:last-child {
+          border-bottom: none;
+        }
+        .nav-menu a:hover {
+          background: var(--bg);
+        }
       }
       .hero {
         background:
@@ -652,7 +744,7 @@
         font-size: 0.88rem;
         text-align: center;
       }
-      @media (max-width: 880px) {
+      @media (max-width: 1024px) {
         .hero .w,
         .dash,
         .charts,
@@ -678,6 +770,245 @@
         }
         .tl button {
           flex: 1 1 40%;
+        }
+      }
+      @media (max-width: 480px) {
+        .w {
+          padding: 0 0.75rem;
+        }
+        .hero h1 {
+          font-size: clamp(1.4rem, 4.5vw, 2rem);
+          margin: 0.8rem 0;
+        }
+        .hero p {
+          font-size: 0.95rem;
+          margin-bottom: 1rem;
+        }
+        .hero .glass {
+          padding: 0.8rem;
+        }
+        .glass h4 {
+          font-size: 0.75rem;
+        }
+        .glass .v {
+          font-size: 1.8rem;
+        }
+        .glass .v small {
+          font-size: 0.8rem;
+        }
+        .mini {
+          gap: 0.4rem;
+          margin-top: 0.5rem;
+        }
+        .mini div {
+          padding: 0.4rem 0.6rem;
+          font-size: 0.7rem;
+        }
+        .mini b {
+          font-size: 0.9rem;
+        }
+        .nav nav {
+          display: flex !important;
+          flex-direction: column;
+          position: fixed;
+          gap: 0;
+          padding: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+        }
+        .nav nav.open {
+          max-height: calc(100vh - 56px);
+        }
+        .nav nav a {
+          padding: 1rem 1.25rem;
+          border-bottom: 1px solid var(--ln);
+        }
+        .nav nav a:last-child {
+          border-bottom: none;
+        }
+        h2 {
+          font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+          margin-bottom: 0.5rem;
+        }
+        .lead {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
+        section {
+          padding: 2rem 0;
+        }
+        .pill {
+          font-size: 0.75rem;
+          padding: 0.25rem 0.5rem;
+        }
+        .pill i {
+          width: 6px;
+          height: 6px;
+        }
+        .btns {
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+        .btn {
+          width: 100%;
+          text-align: center;
+          padding: 0.6rem 1rem;
+          font-size: 0.85rem;
+        }
+        .kp {
+          grid-template-columns: 1fr;
+          gap: 0.4rem;
+        }
+        .kp div {
+          padding: 0.5rem 0.6rem;
+        }
+        .kp span {
+          font-size: 0.65rem;
+        }
+        .kp b {
+          font-size: 0.9rem;
+        }
+        .main {
+          padding: 0.75rem;
+        }
+        .side {
+          padding: 0.75rem;
+          gap: 0.25rem;
+        }
+        .side h3 {
+          font-size: 0.7rem;
+          margin-bottom: 0.2rem;
+        }
+        .side button {
+          padding: 0.4rem 0.5rem;
+          font-size: 0.8rem;
+        }
+        .ro {
+          font-size: 0.8rem;
+          margin: 0.4rem 0 0;
+        }
+        pre {
+          margin: 0.6rem 0 0;
+          padding: 0.8rem;
+          font-size: 0.7rem;
+        }
+        .item {
+          padding: 0.6rem 0.8rem;
+        }
+        .item b {
+          font-size: 1rem;
+        }
+        .item span {
+          font-size: 0.8rem;
+        }
+        .det {
+          padding: 1rem;
+        }
+        .badge {
+          font-size: 0.65rem;
+        }
+        .met {
+          font-size: clamp(2.2rem, 5vw, 3.2rem);
+        }
+        .ml {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+        }
+        .seg {
+          padding: 3px;
+          gap: 1px;
+        }
+        .seg button {
+          font-size: 0.8rem;
+          padding: 0.4rem 0.8rem;
+        }
+        .tc {
+          min-height: auto;
+          margin: 0.8rem 0;
+        }
+        .tc li i {
+          width: 1.4rem;
+          height: 1.4rem;
+          font-size: 0.7rem;
+        }
+        .ba div {
+          grid-template-columns: 3rem 1fr 3rem;
+          font-size: 0.8rem;
+        }
+        .chips {
+          gap: 0.3rem;
+          margin-top: 1rem;
+        }
+        .chips span {
+          font-size: 0.7rem;
+          padding: 0.2rem 0.5rem;
+        }
+        .tools {
+          gap: 0.5rem;
+        }
+        .tl button {
+          padding: 0.7rem 0.8rem;
+          font-size: 0.9rem;
+        }
+        .tl button span {
+          display: none;
+        }
+        .tp {
+          grid-template-columns: 1fr;
+          gap: 0.8rem;
+          padding: 1rem;
+          border-top: 3px solid var(--t);
+        }
+        .tp h3 {
+          font-size: 1.1rem;
+          margin-bottom: 0.4rem;
+        }
+        .sk {
+          padding: 0.4rem 0;
+          font-size: 0.85rem;
+        }
+        .dots {
+          gap: 2px;
+        }
+        .dots i {
+          width: 8px;
+          height: 8px;
+        }
+        .two .card {
+          padding: 1rem;
+        }
+        .two ul {
+          padding-left: 1rem;
+          margin: 0.4rem 0 0;
+          font-size: 0.95rem;
+        }
+        .two ul li {
+          margin-bottom: 0.4rem;
+        }
+        .cta {
+          padding: 1.5rem 1rem;
+          border-radius: 12px;
+        }
+        .cta a.big {
+          font-size: clamp(1rem, 2.5vw, 1.6rem);
+          text-decoration-thickness: 2px;
+          text-underline-offset: 3px;
+        }
+        .cta p {
+          font-size: 0.95rem;
+          margin: 0.8rem 0 0;
+        }
+        .lk {
+          flex-direction: column;
+          margin-top: 1rem;
+        }
+        .lk .btn {
+          width: 100%;
+        }
+        footer {
+          padding: 1.5rem 0 2rem;
+          font-size: 0.8rem;
         }
       }
       @media (prefers-reduced-motion: reduce) {

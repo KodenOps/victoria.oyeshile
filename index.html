@@ -18,7 +18,12 @@
       <div class="w">
         <div class="nav">
           <b>Victoria.oye</b>
-          <nav aria-label="Main">
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav aria-label="Main" id="navMenu" class="nav-menu">
             <a href="#top">Home</a><a href="#demo">Dashboard</a
             ><a href="#work">Case studies</a><a href="#skills">Toolkit</a
             ><a href="#about">About</a><a href="#contact">Contact</a>
@@ -557,6 +562,21 @@
         p.querySelector("pre").textContent = x.code;
       }
       ts(0);
+      /* hamburger menu */
+      var menuToggle = $("menuToggle"),
+        navMenu = $("navMenu"),
+        closeMenu = function () {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navMenu.classList.remove("open");
+        };
+      menuToggle.onclick = function () {
+        var isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isOpen);
+        navMenu.classList.toggle("open");
+      };
+      navMenu.querySelectorAll("a").forEach(function (a) {
+        a.onclick = closeMenu;
+      });
       /* scroll spy */
       var links = document.querySelectorAll(".nav nav a"),
         io = new IntersectionObserver(
