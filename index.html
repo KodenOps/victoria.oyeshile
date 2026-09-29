@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Your Name | Data Analyst</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="top">
+      <div class="w">
+        <div class="nav">
+          <b>Victoria.oye</b>
+          <nav aria-label="Main">
+            <a href="#top">Home</a><a href="#demo">Dashboard</a
+            ><a href="#work">Case studies</a><a href="#skills">Toolkit</a
+            ><a href="#about">About</a><a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <main id="top">
+      <div class="hero">
+        <div class="w">
+          <div>
+            <span class="pill"><i></i>Open to data analyst roles</span>
+            <h1>I turn raw data into <span>decisions</span>.</h1>
+            <p>
+              Data analyst skilled in Excel, Power BI, SQL and Python. I clean the data,
+              find the story, and build dashboards that teams actually use.
+            </p>
+            <div class="btns">
+              <a class="btn m" href="#work">View case studies</a
+              ><a class="btn" href="#demo">Play with a dashboard</a>
+            </div>
+          </div>
+          <div class="glass" role="img" aria-label="Sample revenue trend card">
+            <h4>Revenue trend (sample)</h4>
+            <div class="v">$1.42M <small>+12.4%</small></div>
+            <svg viewBox="0 0 300 90">
+              <defs>
+                <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#8fa2ff" stop-opacity=".5" />
+                  <stop offset="1" stop-color="#8fa2ff" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M0 70 C30 60 45 75 75 55 S130 50 160 38 S230 30 300 8 V90 H0Z"
+                fill="url(#g)"
+              />
+              <path
+                class="spark"
+                d="M0 70 C30 60 45 75 75 55 S130 50 160 38 S230 30 300 8"
+                fill="none"
+                stroke="#8fa2ff"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="mini">
+              <div>Tools<b>Excel · BI · SQL · Py</b></div>
+              <div>Focus<b>Insights that ship</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="demo">
+        <div class="w">
+          <h2>Interactive dashboard</h2>
+          <p class="lead">
+            Pick a region and hover the bars. This is how I design dashboards: focused
+            KPIs, one clear filter, and the SQL behind the view. Data is simulated.
+          </p>
+          <div class="card dash">
+            <div class="side" id="f"></div>
+            <div class="main">
+              <div class="kp" id="kp"></div>
+              <div class="charts">
+                <div>
+                  <h4>Revenue by month ($k)</h4>
+                  <svg
+                    id="c1"
+                    viewBox="0 0 400 190"
+                    role="img"
+                    aria-label="Monthly revenue"
+                  ></svg>
+                </div>
+                <div>
+                  <h4>Revenue by product ($k)</h4>
+                  <svg
+                    id="c2"
+                    viewBox="0 0 220 190"
+                    role="img"
+                    aria-label="Revenue by product"
+                  ></svg>
+                </div>
+              </div>
+              <p class="ro" id="ro" aria-live="polite">Hover a bar to see its value.</p>
+              <pre id="sql"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" style="background: var(--sf)">
+        <div class="w">
+          <h2>Case studies</h2>
+          <p class="lead">
+            Select a project, then switch between the problem, my approach and the
+            outcome. Results shown are samples to replace with yours.
+          </p>
+          <div class="split">
+            <div class="list" id="cl" role="tablist" aria-label="Projects"></div>
+            <div class="card det" id="cd" role="tabpanel"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="w">
+          <h2>Toolkit</h2>
+          <p class="lead">
+            The depth behind each tool, and a real snippet from my day-to-day work.
+          </p>
+          <div class="tools">
+            <div class="tl" id="tl" role="tablist" aria-label="Tools"></div>
+            <div class="card tp" id="tp" role="tabpanel"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" style="background: var(--sf)">
+        <div class="w">
+          <h2>About me</h2>
+          <div class="two">
+            <div class="card">
+              <p>
+                [Write 2-3 sentences: your background, what drew you to data, and the team
+                you want to join.]
+              </p>
+              <p>
+                I'm detail-oriented, curious, and good at explaining numbers to people who
+                don't live in spreadsheets.
+              </p>
+            </div>
+            <div class="card">
+              <h3 style="font-size: 1.2rem">Education and credentials</h3>
+              <ul>
+                <li>[Degree, School, Year]</li>
+                <li>[Microsoft PL-300 Power BI Data Analyst]</li>
+                <li>[Google Data Analytics Certificate]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="w">
+          <div class="cta">
+            <h2>Let's build something useful.</h2>
+            <p>Open to analyst roles, internships and freelance projects.</p>
+            <a class="big" href="mailto:you@example.com">you@example.com</a>
+            <div class="lk">
+              <a class="btn" href="#">LinkedIn</a><a class="btn" href="#">GitHub</a
+              ><a class="btn m" href="#">Download resume</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy; 2026 Your Name. Dashboard data is simulated.</footer>
+    <script>
+      var $ = function (i) {
+          return document.getElementById(i);
+        },
+        E = function (t, a) {
+          var e = document.createElementNS("http://www.w3.org/2000/svg", t);
+          for (var k in a) e.setAttribute(k, a[k]);
+          return e;
+        };
+      /* dashboard */
+      var R = ["All regions", "North", "South", "East", "West"],
+        P = ["Software", "Hardware", "Services", "Support"],
+        M = "JFMAMJJASOND".split(""),
+        MN =
+          "January February March April May June July August September October November December".split(
+            " ",
+          ),
+        base = [52, 44, 38, 30],
+        aov = [210, 185, 240, 170],
+        sh = [0.38, 0.27, 0.2, 0.15],
+        sel = 0,
+        sm = function (a, b) {
+          return a + b;
+        },
+        D = base.map(function (b, r) {
+          return M.map(function (_, m) {
+            return Math.round(
+              b * (1 + 0.045 * m) * (1 + 0.16 * Math.sin(m * 0.9 + r * 1.3)),
+            );
+          });
+        });
+      $("f").innerHTML = "<h3>Region</h3>";
+      R.forEach(function (n, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = n;
+        b.onclick = function () {
+          sel = i;
+          draw();
+        };
+        $("f").appendChild(b);
+      });
+      function bars(id, v, l, col, nm) {
+        var s = $(id);
+        s.innerHTML = "";
+        var mx = Math.max.apply(0, v),
+          W = id == "c1" ? 400 : 220,
+          n = v.length;
+        v.forEach(function (x, i) {
+          var bw = W / n,
+            bh = (x / mx) * 150,
+            r = E("rect", {
+              class: "b",
+              x: i * bw + bw * 0.15,
+              y: 170 - bh,
+              width: bw * 0.7,
+              height: bh,
+              rx: 4,
+              fill: col[i % col.length],
+              tabindex: 0,
+            });
+          var f = function () {
+            $("ro").textContent = nm(i) + ": $" + x + "k";
+          };
+          r.onmouseenter = f;
+          r.onfocus = f;
+          s.appendChild(r);
+          var t = E("text", { x: i * bw + bw * 0.5, y: 186, "text-anchor": "middle" });
+          t.textContent = l[i];
+          s.appendChild(t);
+        });
+      }
+      function draw() {
+        $("f")
+          .querySelectorAll("button")
+          .forEach(function (b, i) {
+            b.setAttribute("aria-pressed", i == sel);
+          });
+        var rw = sel == 0 ? [0, 1, 2, 3] : [sel - 1],
+          mon = M.map(function (_, m) {
+            return rw.reduce(function (a, r) {
+              return a + D[r][m];
+            }, 0);
+          }),
+          tot = mon.reduce(sm),
+          ord = rw.reduce(function (a, r) {
+            return a + (D[r].reduce(sm) * 1000) / aov[r];
+          }, 0),
+          h1 = mon.slice(0, 6).reduce(sm),
+          g = ((tot - h1) / h1 - 1) * 100;
+        $("kp").innerHTML =
+          "<div><span>Revenue</span><b>$" +
+          (tot / 1000).toFixed(2) +
+          "M</b></div><div><span>Orders</span><b>" +
+          Math.round(ord).toLocaleString() +
+          "</b></div><div><span>Avg order</span><b>$" +
+          Math.round((tot * 1000) / ord) +
+          "</b></div><div><span>H2 vs H1</span><b class='" +
+          (g >= 0 ? "up" : "dn") +
+          "'>" +
+          (g >= 0 ? "+" : "") +
+          g.toFixed(1) +
+          "%</b></div>";
+        bars("c1", mon, M, ["var(--pr)"], function (i) {
+          return MN[i];
+        });
+        bars(
+          "c2",
+          sh.map(function (s) {
+            return Math.round(tot * s);
+          }),
+          P.map(function (p) {
+            return p.slice(0, 5);
+          }),
+          ["var(--gr)", "var(--am)", "var(--pu)", "var(--ac)"],
+          function (i) {
+            return P[i];
+          },
+        );
+        $("sql").textContent =
+          "SELECT DATE_TRUNC('month', order_date) AS month,\n       SUM(amount) AS revenue\nFROM orders\n" +
+          (sel ? "WHERE region = '" + R[sel] + "'\n" : "") +
+          "GROUP BY 1 ORDER BY 1;";
+      }
+      draw();
+      /* case studies */
+      var C = [
+          {
+            n: "Sales Performance Dashboard",
+            s: "Excel · Power Query",
+            c: "var(--gr)",
+            m: 18,
+            pre: "+",
+            suf: "%",
+            ml: "lift in targeted-region sales",
+            a: "Sales index",
+            b0: 100,
+            b1: 118,
+            u: "",
+            p: "Leadership had twelve monthly spreadsheets and no single view of what drove revenue or where it was leaking.",
+            st: [
+              "Combined and cleaned the files with Power Query",
+              "Built a data model with Power Pivot",
+              "Designed a dashboard with slicers, PivotCharts and XLOOKUP-driven KPIs",
+              "Presented findings and next actions to the team",
+            ],
+            o: "[Replace: what changed because of your work, e.g. two weak regions identified and a targeted campaign raised sales.]",
+            t: ["Excel", "Power Query", "PivotTables", "Power Pivot", "XLOOKUP"],
+          },
+          {
+            n: "Customer Churn Analysis",
+            s: "SQL · Power BI",
+            c: "var(--pr)",
+            m: 22,
+            pre: "-",
+            suf: "%",
+            ml: "reduction in customer churn",
+            a: "Churn rate",
+            b0: 14,
+            b1: 10.9,
+            u: "%",
+            p: "The retention team could not tell which customers were about to leave, so outreach was untargeted.",
+            st: [
+              "Wrote SQL with CTEs and window functions to build cohorts and recency scores",
+              "Modelled the data as a star schema in Power BI",
+              "Created DAX measures for churn and retention",
+              "Added drill-through pages for account managers",
+            ],
+            o: "[Replace: e.g. the team prioritised at-risk accounts and churn fell over two quarters.]",
+            t: ["SQL", "CTEs", "Window functions", "Power BI", "DAX"],
+          },
+          {
+            n: "Automated Weekly Report",
+            s: "Python · pandas",
+            c: "var(--pu)",
+            m: 10,
+            pre: "",
+            suf: "h",
+            ml: "saved every week",
+            a: "Hours per week",
+            b0: 12,
+            b1: 2,
+            u: "h",
+            p: "A weekly report took hours of manual copy-paste and regularly contained errors.",
+            st: [
+              "Loaded and validated the raw exports with pandas",
+              "Cleaned, merged and aggregated the data",
+              "Generated charts with matplotlib",
+              "Scheduled the script to output a ready-to-send file",
+            ],
+            o: "[Replace: e.g. report time dropped from 12 hours to 2 and manual errors were removed.]",
+            t: ["Python", "pandas", "matplotlib", "Automation"],
+          },
+        ],
+        ci = 0,
+        ct = 0;
+      C.forEach(function (x, i) {
+        var b = document.createElement("button");
+        b.className = "item";
+        b.setAttribute("role", "tab");
+        b.innerHTML = "<b>" + x.n + "</b><span>" + x.s + "</span>";
+        b.onclick = function () {
+          ci = i;
+          ct = 0;
+          cs();
+        };
+        $("cl").appendChild(b);
+      });
+      function cnt(el, to, pre, suf) {
+        if (matchMedia("(prefers-reduced-motion:reduce)").matches) {
+          el.textContent = pre + to + suf;
+          return;
+        }
+        var t0 = performance.now();
+        (function f(t) {
+          var p = Math.min((t - t0) / 900, 1);
+          el.textContent = pre + Math.round(to * (1 - Math.pow(1 - p, 3))) + suf;
+          if (p < 1) requestAnimationFrame(f);
+        })(t0);
+      }
+      function cs() {
+        var x = C[ci],
+          d = $("cd"),
+          mx = Math.max(x.b0, x.b1);
+        d.style.setProperty("--c", x.c);
+        $("cl")
+          .querySelectorAll(".item")
+          .forEach(function (b, i) {
+            b.setAttribute("aria-selected", i == ci);
+          });
+        var body =
+          ct == 0
+            ? "<p>" + x.p + "</p>"
+            : ct == 1
+              ? "<ol>" +
+                x.st
+                  .map(function (s, i) {
+                    return "<li><i>" + (i + 1) + "</i><span>" + s + "</span></li>";
+                  })
+                  .join("") +
+                "</ol>"
+              : "<p>" + x.o + "</p>";
+        d.innerHTML =
+          "<span class='badge'>Sample result: replace with yours</span><div class='met' id='mt'>0</div><div class='ml'>" +
+          x.ml +
+          "</div><div class='seg' role='tablist'>" +
+          ["Problem", "Approach", "Outcome"]
+            .map(function (t, i) {
+              return (
+                "<button role='tab' aria-selected='" +
+                (i == ct) +
+                "' data-i='" +
+                i +
+                "'>" +
+                t +
+                "</button>"
+              );
+            })
+            .join("") +
+          "</div><div class='tc'>" +
+          body +
+          "</div><div class='ba'><div><span>Before</span><span class='tr'><i id='b0' style='background:var(--mu)'></i></span><span>" +
+          x.b0 +
+          x.u +
+          "</span></div><div><span>After</span><span class='tr'><i id='b1' style='background:" +
+          x.c +
+          "'></i></span><span>" +
+          x.b1 +
+          x.u +
+          "</span></div></div><div class='chips'>" +
+          x.t
+            .map(function (t) {
+              return "<span>" + t + "</span>";
+            })
+            .join("") +
+          "</div>";
+        d.querySelectorAll(".seg button").forEach(function (b) {
+          b.onclick = function () {
+            ct = +b.dataset.i;
+            cs();
+          };
+        });
+        cnt($("mt"), x.m, x.pre, x.suf);
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            $("b0").style.width = (x.b0 / mx) * 100 + "%";
+            $("b1").style.width = (x.b1 / mx) * 100 + "%";
+          });
+        });
+      }
+      cs();
+      /* toolkit */
+      var T = [
+        {
+          n: "Excel",
+          c: "#1f9d55",
+          k: [
+            ["Dashboards and slicers", 4],
+            ["Power Query and Power Pivot", 4],
+            ["XLOOKUP, INDEX/MATCH, SUMIFS", 5],
+            ["Dynamic arrays and LET", 3],
+          ],
+          code: '=XLOOKUP(A2, Customers[ID],\n         Customers[Region], "Unknown")\n\n=SUMIFS(Sales[Amount],\n        Sales[Region], $F2,\n        Sales[Month],  G$1)',
+        },
+        {
+          n: "Power BI",
+          c: "#e6a100",
+          k: [
+            ["Data modelling (star schema)", 4],
+            ["DAX measures and time intelligence", 3],
+            ["Power Query (M)", 4],
+            ["Drill-through and bookmarks", 3],
+          ],
+          code: "Revenue YoY % =\nVAR Prev =\n  CALCULATE([Revenue],\n    SAMEPERIODLASTYEAR('Date'[Date]))\nRETURN DIVIDE([Revenue] - Prev, Prev)",
+        },
+        {
+          n: "SQL",
+          c: "#3b5bfd",
+          k: [
+            ["Joins and subqueries", 4],
+            ["CTEs", 4],
+            ["Window functions", 3],
+            ["Cohort and retention queries", 3],
+          ],
+          code: "WITH monthly AS (\n  SELECT customer_id,\n    DATE_TRUNC('month', order_date) AS m,\n    SUM(amount) AS spend\n  FROM orders GROUP BY 1, 2)\nSELECT *, RANK() OVER (\n  PARTITION BY m ORDER BY spend DESC) rnk\nFROM monthly;",
+        },
+        {
+          n: "Python",
+          c: "#8b5cf6",
+          k: [
+            ["pandas and NumPy", 4],
+            ["Data cleaning and EDA", 4],
+            ["matplotlib and seaborn", 3],
+            ["Automation scripts", 3],
+          ],
+          code: 'import pandas as pd\n\ndf = pd.read_csv("sales.csv",\n                 parse_dates=["date"])\ndf = df.dropna(subset=["amount"])\nmonthly = df.groupby(\n  df.date.dt.to_period("M"))["amount"].sum()\nmonthly.plot(kind="bar")',
+        },
+      ];
+      T.forEach(function (x, i) {
+        var b = document.createElement("button");
+        b.setAttribute("role", "tab");
+        b.style.setProperty("--t", x.c);
+        b.innerHTML = x.n + "<span aria-hidden='true'>›</span>";
+        b.onclick = function () {
+          ts(i);
+        };
+        $("tl").appendChild(b);
+      });
+      function ts(i) {
+        var x = T[i];
+        $("tl")
+          .querySelectorAll("button")
+          .forEach(function (b, j) {
+            b.setAttribute("aria-selected", j == i);
+          });
+        var p = $("tp");
+        p.style.setProperty("--t", x.c);
+        p.innerHTML =
+          "<div><h3 style='font-size:1.3rem;margin-bottom:.5rem'>Skills</h3>" +
+          x.k
+            .map(function (k) {
+              var d = "";
+              for (var j = 0; j < 5; j++)
+                d += "<i class='" + (j < k[1] ? "f" : "") + "'></i>";
+              return (
+                "<div class='sk'><span>" +
+                k[0] +
+                "</span><span class='dots' aria-label='" +
+                k[1] +
+                " of 5'>" +
+                d +
+                "</span></div>"
+              );
+            })
+            .join("") +
+          "</div><div><h3 style='font-size:1.3rem'>In practice</h3><pre></pre></div>";
+        p.querySelector("pre").textContent = x.code;
+      }
+      ts(0);
+      /* scroll spy */
+      var links = document.querySelectorAll(".nav nav a"),
+        io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting)
+                links.forEach(function (a) {
+                  a.classList.toggle("on", a.getAttribute("href") == "#" + e.target.id);
+                });
+            });
+          },
+          { rootMargin: "-40% 0px -55% 0px" },
+        );
+      document.querySelectorAll("main,section").forEach(function (s) {
+        io.observe(s);
+      });
+    </script>
+  </body>
+</html>
